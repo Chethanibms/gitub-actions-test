@@ -3,7 +3,7 @@ on: push
 
 jobs:
   functions:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: dump
         run: |
@@ -12,7 +12,7 @@ jobs:
           echo ${{ endsWith( 'hello', 'lo' ) }}
           echo ${{ format('hello {0} {1} {2}', 'world', '!', '!') }}          
   dump_contexts_to_log:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
         id: github_context_step
